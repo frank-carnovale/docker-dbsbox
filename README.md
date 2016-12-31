@@ -1,7 +1,7 @@
 # frankcarnovale/dbsbox
 
 # From
-wnameless/postgresql-phppgadmin
+[wnameless/postgresql-phppgadmin](/r/wnameless/postgresql-phppgadmin/)
 
 .. which provides Postgres, PhpPgAdmin, and ssh access.
 
@@ -42,7 +42,7 @@ ssh postgres@localhost -p 49160
 
 # once in as postgres..
 cd /sql
-# using PG\* env var defaults (as arranged in builder.sh)
+# using PG* env var defaults (as arranged in builder.sh)
 psql
 # or to connect to different dbs or users called xyz as set up in your own test db..
 PGPASSWORD=xyz PGDATABASE=xyz PGUSER=xyz psql
