@@ -12,7 +12,10 @@ See there for info on ports, etc.
 We run 2 user-supplied sql scripts to build a database:
 - test_user.sql -- connect as postgres; typically creates a database and a schema owner called test_user
 - test_data.sql -- connect as test_user; typically builds tables and test data via insert statements
-These scripts should be provided via a volume shared to /sql.  If no volume is shared, a trivial default set is run instead.  See the build source for the defaults.
+Also optionally:
+- profile.sh    -- sets up PG environment vars to override the names test_db and test_user
+These scripts should all be provided via a volume shared to /sql.
+If no volume is shared, a trivial default set is run instead.  See the build source for the defaults.
 
 # Usage notes
 ```
@@ -42,8 +45,6 @@ ssh postgres@localhost -p 49160
 
 # once in as postgres..
 cd /sql
-# using PG* env var defaults (as arranged in builder.sh)
+# using PG* env var defaults (as arranged by dbsbox.sh or overriden in your profile.sh)
 psql
-# or to connect to different dbs or users called xyz as set up in your own test db..
-PGPASSWORD=xyz PGDATABASE=xyz PGUSER=xyz psql
 ```

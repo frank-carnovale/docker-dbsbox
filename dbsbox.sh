@@ -9,3 +9,7 @@ export PGDATABASE=test_db
 export PGHOST=localhost
 export PGUSER=test_user
 
+if [ -f /sql/profile.sh ]; then
+      . /sql/profile.sh
+fi
+
