@@ -10,3 +10,6 @@ apt-get install -y vim net-tools
 printf x\\nx\\n | passwd
 printf x\\nx\\n | passwd postgres
 
+# supply ServerName of dbs to Apache
+echo 'ServerName dbs' >>/etc/apache2/apache2.conf
+
