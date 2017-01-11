@@ -14,6 +14,7 @@ We run 2 user-supplied sql scripts to build a database:
 - test_data.sql -- connect as test_user; typically builds tables and test data via insert statements
 Also optionally:
 - profile.sh    -- sets up PG environment vars to override the names test_db and test_user
+
 These scripts should all be provided via a volume shared to /sql.
 If no volume is shared, a trivial default set is run instead.  See the build source for the defaults.
 
