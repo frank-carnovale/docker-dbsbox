@@ -12,6 +12,7 @@ See there for info on ports, etc.
 We run 2 user-supplied sql scripts to build a database:
 - test_user.sql -- connect as postgres; typically creates a database and a schema owner called test_user
 - test_data.sql -- connect as test_user; typically builds tables and test data via insert statements
+
 Also optionally:
 - profile.sh    -- sets up PG environment vars to override the names test_db and test_user
 
